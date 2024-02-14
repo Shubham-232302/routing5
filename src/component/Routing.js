@@ -5,6 +5,7 @@ import Footer from './Footer'
 import Post from './Post'
 import Profile from './Profile'
 import Home from './Home'
+import PostDetails from './PostDetails'
 
 const App = () => {
     return(
@@ -12,7 +13,8 @@ const App = () => {
         <BrowserRouter>
             <Header/>
                 <Route exact path="/" component={Home}/>
-                <Route path="/post" component={Post}/>
+                <Route exact path="/post" component={Post}/>
+                <Route path="/post/:item" component={PostDetails}/>
                 <Route path="/profile" component = {Profile}/>
             <Footer/>
         </BrowserRouter>
